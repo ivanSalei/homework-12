@@ -1,0 +1,278 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.wrapper {
+  background: linear-gradient(to right, hsl(0deg 0% 100%) 20px, hsl(0deg 0% 13%) 20px) 0 0 / 40px 20px repeat-x, linear-gradient(to right, hsl(0deg 0% 100%) 100px, transparent 100px 400px) center / 550px 15px repeat-x, hsl(0deg 0% 33%);
+  height: 100vh;
+ 
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes move {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: 200px;
+	}
+}
+
+/* Section auto-start */
+.auto {
+
+}
+
+.auto__box {
+padding-top: 140px;
+  margin: 0 auto;
+  animation-name: move-road;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  position: relative;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes move-road {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: 100%;
+	}
+}
+
+.cabin {
+  width: 800px;
+  height: 480px;
+  background-color: red;
+  border-radius: 20px 40px;
+  position: relative;
+}
+
+.cabins {
+  width: 400px;
+  height: 480px;
+  background-color: red;
+  border-radius: 20px 40px;
+ position: absolute; 
+ left: 810px;
+
+}
+
+.cabin::before {
+  content: '';
+  width: 100%;
+  height: 40px;
+  background-color: aliceblue;
+  position: absolute;
+  top: 312px;
+}
+.cabins::before {
+  content: '';
+  width: 100%;
+  height: 40px;
+  background-color: aliceblue;
+  position: absolute;
+  top: 312px;
+}
+
+.cabins::after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-color: rgb(12, 9, 204);
+  position: absolute;
+  top: -50px;
+  border-radius: 20px 20px 0 0;
+  right: 90px;
+  animation-name: color-change;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes color-change{
+  0%{background-color: #fff;}
+
+100%{
+  background-color: blue;
+}
+}
+
+.door {
+  width: 250px;
+  height: 200px;
+  background-color: rgb(124, 164, 199, .8);
+  border-radius: 20px;
+  position: absolute;
+  top: 70px;
+  left: 60px;
+  
+}
+.doorss {
+  width: 130px;
+  height: 200px;
+  background-color: rgb(124, 164, 199, .8);
+  border-radius: 100px;
+  position: absolute;
+  top: 70px;
+  right: 30px;
+  
+}
+
+.doorss::before{
+  content: "м. ТЯЧІВ";
+  color: #fff;
+  text-align: center;
+  padding-top: 150px;
+  font-size: 20px;
+  position: absolute;
+  width: 150px;
+  height: 330px;
+  box-shadow: 2px 2px 2px #000, -2px -2px 2px #000;
+  transform: translateX(-213px);
+  
+  
+
+}
+
+.doorss span{
+  width: 50px;
+  height: 10px;  
+  background-color: aliceblue;
+  position: absolute;
+  border-radius: 50%;
+  bottom: -30px;
+  left: -154%;
+}
+
+.door span{
+  width: 50px;
+  height: 10px;  
+  background-color: aliceblue;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 40px;
+  left: 36%;
+}
+
+.door p{
+  text-align: center;
+  color: #fff;
+  
+}
+.doors p{
+  text-align: center;
+  color: #fff;
+}
+
+.doors {
+  width: 250px;
+  height: 200px;
+  background-color: rgb(124, 164, 199, .8);
+  border-radius: 20px;
+  position: absolute;
+  top: 70px;
+  right: 60px;
+}
+
+.doors span{
+  width: 50px;
+  height: 10px;  
+  background-color: aliceblue;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 40px;
+  left: 36%;
+}
+
+.wheel {
+  width: 150px;
+  height: 150px;
+  background-color: #0a141d;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -70px;
+  left: 125px;
+  border: 10px dotted #000;
+ animation-name: rotate;
+ animation-iteration-count: infinite;
+ animation-duration: .2s;
+}
+
+.wheel::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: aliceblue;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  border-radius: 50%;
+}
+
+.wheels {
+  width: 150px;
+  height: 150px;
+  background-color: #0a141d;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -70px;
+  right: 125px;
+  border: 10px dotted #000;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-duration: .3s;
+}
+
+.wheels::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: aliceblue;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  border-radius: 50%;
+}
+/* Section auto-end */
+
